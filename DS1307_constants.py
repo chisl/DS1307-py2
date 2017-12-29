@@ -12,4 +12,12 @@ __email__      = "info@chisl.io"
 __status__     = "Test"
 
 class REG:
-	SECS = 0
+	SECONDS = 0
+	MINUTES = 1
+	HOURS = 2
+	HOURS = 2
+	DAY = 3
+	DATE = 4
+	MONTH = 5
+	YEAR = 6
+	CONTROL = 7
