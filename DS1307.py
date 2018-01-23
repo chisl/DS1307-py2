@@ -6,17 +6,22 @@ __author__     = "ChISL"
 __copyright__  = "TBD"
 __credits__    = ["Maxim Integrated"]
 __license__    = "TBD"
-__version__    = "0.1"
+__version__    = "Version 0.1"
 __maintainer__ = "https://chisl.io"
 __email__      = "info@chisl.io"
 __status__     = "Test"
+
+#
+#   THIS FILE IS AUTOMATICALLY CREATED
+#    D O     N O T     M O D I F Y  !
+#
 
 from DS1307_constants import *
 
 # name:        DS1307
 # description: Lowpower serial real-time clock (RTC) with full binary-coded decimal (BCD) clock/calendar plus 56 bytes of NV SRAM.
 # manuf:       Maxim Integrated
-# version:     0.1
+# version:     Version 0.1
 # url:         https://datasheets.maximintegrated.com/en/ds/DS1307.pdf
 # date:        2017-01-11
 
@@ -36,7 +41,11 @@ class DS1307_Base:
 		return self.read(REG.SECONDS, 8)
 	
 	# Bits CH
-	# Clock halt 
+	# The clock halt bit. When this bit is set to '1', the oscillator is disabled. 
+	#           When cleared to '0', the oscillator is enabled. 
+	#           The clock can be halted whenever the timekeeping functions are not required, 
+	#           which minimizes current (IBATDR). 
+	
 	# Bits SECS_10
 	# Bits SECS
 	# Register MINUTES
@@ -155,7 +164,7 @@ class DS1307_Base:
 	# Bits YEAR
 	# BCD format
 	# Register CONTROL
-	
+	# The DS1307 control register is used to control the operation of the SQW/OUT pin. 
 	
 	def setCONTROL(self, val):
 		"""Set register CONTROL"""
